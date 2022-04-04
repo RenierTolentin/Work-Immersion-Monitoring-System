@@ -8,6 +8,7 @@
 ## Install
 
 * Suggest to download xampp when running this application [xampp](https://www.apachefriends.org/index.html)
+* All the files is in the masters folder
 
 ## Tools - Languages
 
