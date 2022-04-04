@@ -1,0 +1,497 @@
+*{
+    padding: 0;
+    margin: 0;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    text-decoration: none;
+    list-style-type: none;
+}
+
+div.loader{
+    position: fixed;
+    z-index: 10;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #4d7ee5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+div.loader > img{
+    width: 110px; 
+    height: 100px;
+}
+
+div.loader.loaderHidden{
+    animation: fadeOut .5s;
+    animation-fill-mode: forwards;
+    animation-delay: 2.1s;
+}
+
+@keyframes fadeOut{
+    100%{opacity: 0; visibility: hidden};
+}
+
+::-webkit-scrollbar{
+    width: 15px;
+    position: fixed;
+    top: 0;
+    right: 0;
+    background: #e5e5fd;
+}
+
+::-webkit-scrollbar-thumb{
+    background: #2727a8;
+    position: fixed;
+    top: 0;
+    right: 0;
+}
+
+nav{
+    background: #4d7ee5;
+    padding: 10px 5px 10px;
+    box-sizing: border-box;
+}
+
+nav img{
+    width: 100%;
+    max-width: 150px;
+    border: 5px solid #4365af;
+    padding: 10px;
+    margin: 0px auto;
+    box-sizing: border-box;
+    border-radius: 26px;
+    background: white;
+}
+
+nav a#navigate{
+    display: none;
+}
+
+nav li{
+    width: 90%;
+    font-size: 25px;
+    padding: 7px;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px;
+    text-align: center;
+    margin: 14px auto;
+}
+
+nav li a{
+    color: white;
+    font-weight: 800;
+    text-align: center;
+}
+
+li.current{
+    background: white;
+}
+
+a.current{
+    color: #4d7ee5;
+}
+
+form{
+    width: 95%;
+    max-width: 1100px;
+    padding: 20px;
+    box-sizing: border-box;
+    border: 2px solid #4d7ee5;
+    border-radius: 20px;
+    margin: 35px auto 20px;
+    position: relative;
+    text-align: center;
+}
+
+form div.first{
+    width: 100%;
+    position: relative;
+    margin: 0px;
+}
+
+form div.first input{
+    padding: 5px;
+    font-size: 20px;
+    width: 70%;
+    border: 2px solid #4d7ee5;
+    text-align: center;
+    outline: none;
+    color: #4d7ee5;
+    border-radius: 10px;
+    box-sizing: border-box;
+}
+
+form div.first button.search{
+    font-size: 19px;
+    padding: 7px 10px;
+    outline: none;
+    border: 0;
+    background: #4d7ee5;
+    color: white;
+}
+
+div.first > div.traineeInfo{
+    width: 90%;
+    background: #4d7ee5;
+    position: relative;
+    margin: 10px auto;
+    padding: 30px;
+    box-sizing: border-box;
+    border-radius: 20px;
+    color: white;
+    text-align: center;
+}
+
+div.traineeInfo img{
+    width: 100%;
+    height: 150px;
+    border: 3px solid white;
+    box-sizing: border-box;
+}
+
+div.traineeInfo p{
+    width: 90%;
+    margin: 0 auto;
+    position: relative;
+    box-sizing: border-box;
+    font-size: 14px;
+}
+
+div.traineeInfo p:nth-of-type(1),
+div.traineeInfo p:nth-of-type(2),
+div.traineeInfo p:nth-of-type(3),
+div.traineeInfo p:nth-of-type(4){
+    left: 10px;
+}
+
+div.traineeInfo p.addStyle{
+    margin-top: 30px;
+    border-bottom: 1px solid white;
+    padding: 3px 1px;
+    box-sizing: border-box;
+    font-size: 18px;
+}
+
+div.traineeInfo p:nth-of-type(5){
+    margin-top: 20px !important;
+}
+
+div.traineeInfo p.title{
+    font-size: 11px;
+    margin-top: 3px;
+}
+
+div.traineeInfo p.getFullWidth{
+    position: relative;
+    bottom: 0;
+    right: 0;
+    width: 80%;
+    border-bottom: 1px solid white;
+    padding: 1px;
+    margin-top: 14px;
+}
+
+div.traineeInfo a.manage{
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    padding: 5px 10px;
+    box-sizing: border-box;
+    background: #2727a8;
+    color: white;
+    cursor: pointer;
+}
+
+form div.second{
+    margin: 10px 0px !important;
+    background: #4d7ee5;
+    padding: 0px 10px 10px;
+    position: relative;
+    justify-content: center;
+}
+
+form div.second h2{
+    border-radius: 20px;
+    position: relative;
+    top: -15px;
+    color: #4d7ee5;
+    background: white;
+    border: 1px solid #4d7ee5;
+    padding: 5px 10px;
+    width: 100%;
+    max-width: 200px;
+    text-align: center;
+    box-sizing: border-box;
+}
+
+table{
+    margin-top: 7px !important;
+    width: 100%;
+    max-width: 1000px;
+    position: relative;
+    margin: 0 auto;
+    text-align: center;
+    border-collapse: collapse;
+}
+
+table tbody{
+    display: block;
+    overflow-y: scroll;
+    max-height: 305px;
+}
+  
+table thead, table tbody tr {
+    display: table;
+    width: 100%;
+    table-layout: fixed;
+}
+
+tbody{
+    border: 1px solid white;
+}
+
+th{
+    padding: 15px;
+    box-sizing: border-box;
+    background: white;
+    color: #4d7ee5;
+    text-align: center;
+    font-size: 15px !important;
+}
+
+tr{
+    box-sizing: border-box;
+    color: white;
+    border-bottom: 1px solid white;
+}
+
+td{
+    text-align: center;
+    padding: 10px;
+    font-size: 12px;
+    box-sizing: border-box;
+}
+
+td img{
+    width: 100%;
+    max-width: 40px !important;
+    height: 40px !important;
+    border: 1px solid white;
+    box-sizing: border-box;
+    border-radius: 50%;
+}
+
+td:nth-of-type(4){
+    text-transform: uppercase;
+}
+
+/* START GRID SYSTEM */
+
+form,
+nav,
+nav ul,
+div.traineeInfo{
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+}
+
+nav > img{
+    grid-column: 1/4;
+}
+
+nav a{
+    grid-column: 1/13;
+}
+
+nav > ul{
+    grid-column: 4/13;
+}
+
+nav ul li a{
+    font-size: 21px;
+}
+
+nav li:nth-of-type(1){
+    grid-column: 6/8;
+}
+
+nav li:nth-of-type(2){
+    grid-column: 8/10;
+}
+
+nav li:nth-of-type(3){
+    grid-column: 10/12;
+}
+
+form > div.first{
+    grid-column: 9/13;
+}
+
+div.traineeInfo img{
+    grid-column: 1/7;
+    grid-row: 1/5;
+}
+
+div.traineeInfo p.traineesImageNext{
+    grid-column: 7/13;
+}
+
+div.traineeInfo p.getFullWidth,
+div.traineeInfo p.getFull{
+    grid-column: 1/13;
+}
+
+form > div.second{
+    grid-column: 1/9;
+}
+
+/* END GRID SYSTEM */
+
+
+/* START MEDIA QUERY */
+
+@media screen and (max-width: 1200px){
+
+    table th{
+        font-size: 14px !important;
+    }
+
+    table td{
+        font-size: 11px !important;
+    }
+
+}
+
+@media screen and (max-width: 1110px){
+
+    form > div.second{
+        grid-column: 1/13 !important;
+    }
+
+    form > div.first{
+        grid-column: 2/12 !important;
+    }
+
+}
+
+@media screen and (max-width: 960px){
+
+    nav > img{
+        grid-column: 2/12;
+    }
+    
+    nav > ul{
+        grid-column: 2/12;
+    }
+    
+    nav li:nth-of-type(1){
+        grid-column: 4/6;
+    }
+    
+    nav li:nth-of-type(2){
+        grid-column: 6/8;
+    }
+    
+    nav li:nth-of-type(3){
+        grid-column: 8/10;
+    }
+
+}
+
+@media screen and (max-width: 790px){
+
+    nav{
+        padding-bottom: 6px;
+    }
+
+    nav img{
+        margin-bottom: 10px;
+    }
+
+    nav ul{
+        overflow: hidden;
+        background: white;
+        height: 0;
+        grid-column: 1/13;
+    }
+
+    nav ul.open{
+        height: auto;
+    }
+
+    nav img.logo{
+        margin: 0 auto;            
+    }
+
+    nav li > a{
+        margin: 0px !important;
+        padding: 12px 0px 4px;
+        cursor: pointer;
+        color: white !important;
+    }
+
+    nav li > a.current{
+        color:#2727a8 !important;
+    }
+
+    nav li{
+        margin: 0;
+        padding: 2px 0px 10px;
+        background: #2727a8;
+        color: white
+    }
+
+    nav ul li:nth-of-type(1),
+    nav ul li:nth-of-type(2),
+    nav ul li:nth-of-type(3){
+        grid-column: 1/13;
+        width: 100%;
+        border-radius: 0;
+    }
+
+    nav a{
+        font-size: 13px !important;
+        color: white !important;
+    }
+
+    a#navigate{
+        display: block !important;
+        height: 40px;
+        width: 100%;                                    /* appear in 90% x-coordinates */
+        background: url(../img/navigation.png) no-repeat 95% center;
+        cursor: pointer;                                    /* appear in center y-coordinates */
+        background-color: white;
+        margin-bottom: 6px;
+    }
+
+}
+
+@media screen and (max-width: 580px){
+
+    table th{
+        font-size: 12px !important;
+    }
+
+    table td{
+        font-size: 9px !important;
+    }
+
+    td img{
+        max-width: 30px !important;
+        height: 30px !important;
+
+    }
+
+    div.first p.addStyle{
+        font-size: 14px;
+    }
+
+}
+
+/* END MEDIA QUERY */

@@ -1,0 +1,690 @@
+*{
+    padding: 0;
+    margin: 0;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    text-decoration: none;
+    list-style-type: none;
+}
+
+div.loader{
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    width: 100%;
+    height: 100%;
+    background: #4B7DE0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+div.loader > img{
+    width: 110px; 
+    height: 100px;
+}
+
+div.loader.loaderHidden{
+    animation: fadeOut .5s;
+    animation-fill-mode: forwards;
+    animation-delay: 1s;
+}
+
+@keyframes fadeOut{
+    100%{opacity: 0; visibility: hidden};
+}
+
+form.userGuide{
+    width: 95%;
+    max-width: 420px;
+    position: fixed;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    z-index: 4;
+    padding: 20px 20px 20px;
+    box-sizing: border-box;
+    border: 3px solid #474ae7;
+    background: white;
+    border-radius: 20px;
+    visibility: hidden;
+    opacity: 0;
+    transition: .7s;
+    text-align: center;
+}
+
+form#userGuidePopUp.active{
+    visibility: visible;
+    opacity: 1;
+    top: 55%;
+    transition: .7s;
+}
+
+form#userDeletionPopUp{
+    max-width: 500px !important;
+}
+
+form#userDeletionPopUp.active{
+    visibility: visible;
+    opacity: 1;
+    top: 55%;
+    transition: .7s;
+}
+
+form.userGuide h3{
+    right: 0;
+    color: #474ae7;
+    margin-bottom: 10px;
+    font-size: 16px;
+}
+
+form.userGuide a{
+    margin: 0px auto;
+}
+
+form.userGuide input:nth-of-type(1){
+    outline: none;
+    padding: 5px 12px;
+    border: 2px solid #4365af;
+    box-sizing: border-box;
+    color: #567fd8;
+    font-weight: 800;
+    cursor: pointer;
+}
+
+form.userGuide input:nth-of-type(2){
+    outline: none;
+    padding: 5px 12px;
+    background: #567fd8;
+    border: 2px solid #567fd8;
+    box-sizing: border-box;
+    color: white;
+    cursor: pointer;
+}
+
+::-webkit-scrollbar{
+    width: 15px;
+    position: fixed;
+    top: 0;
+    right: 0;
+    background: #e5e5fd;
+}
+
+::-webkit-scrollbar-thumb{
+    background: #2727a8;
+    position: fixed;
+    top: 0;
+    right: 0;
+}
+
+nav{
+    background: #4d7ee5;
+    padding: 10px 5px 10px;
+    box-sizing: border-box;
+}
+
+nav img{
+    width: 100%;
+    max-width: 150px;
+    border: 5px solid #4365af;
+    padding: 10px;
+    margin: 0px auto;
+    box-sizing: border-box;
+    border-radius: 26px;
+    background: white;
+}
+
+nav a#navigate{
+    display: none;
+}
+
+nav li{
+    width: 90%;
+    font-size: 25px;
+    padding: 7px;
+    box-sizing: border-box;
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 14px auto;
+}
+
+nav li a{
+    color: white;
+    font-weight: 800;
+    text-align: center;
+}
+
+li.current{
+    background: white;
+}
+
+a.current{
+    color: #4d7ee5;
+}
+
+form.wrapForm{
+    width: 95%;
+    max-width: 1100px;
+    padding: 20px;
+    box-sizing: border-box;
+    border: 2px solid #4d7ee5;
+    border-radius: 20px;
+    margin: 20px auto 20px;
+    position: relative;
+    text-align: center;   
+}
+
+form#blurBackground.active{
+    filter: blur(20px);
+    pointer-events: none;
+    user-select: none;
+}
+
+article.mainArticle{
+    display: grid;
+    justify-content: center;
+    align-items: center;
+}
+
+article.mainArticle > div{
+    background: #4d7ee5;
+    border-radius: 10px;
+    color: white;
+    width: 95%;
+    margin: 14px auto 0px;
+    padding: 0px 5px 10px;
+    box-sizing: border-box;
+}
+
+article.mainArticle > div p{
+    margin-top: 10px;
+    font-size: 20px;
+}
+
+article.mainArticle > div h1{
+    font-size: 30px;
+}
+
+article.secondArticle > div#time{
+    display: flex;
+    margin: 10px auto;
+}
+
+article.secondArticle div#time > div{ 
+    position: relative;
+    margin: 0 2px;
+}
+
+article.secondArticle div#time div span{ 
+    position: relative;
+    display: flex;
+    width: 100px;
+    height: 80%;
+    background: #4d7ee5;
+    justify-content: center;
+    align-items: center;
+    font-weight: 800;
+    font-size: 30px;
+    color: white;
+}
+
+article.secondArticle div#time{
+    display: flex;
+}
+
+article.secondArticle div p.displayTime{
+    width: 100%;
+    background: #2727a8;
+    color: white;
+    padding: 6px 0px;
+    margin-bottom: 10px;
+}
+
+article.secondArticle div.scan p{
+    margin-top: 30px;
+    font-size: 15px;
+    color: #4d7ee5;
+    font-weight: 700;
+}
+
+article.secondArticle div.scan input#EPN{
+    margin-top: 10px;
+    outline: none;
+    width: 71%;
+    border: 2px solid #474ae7;
+    text-align: center;
+    font-size: 20px;
+    padding: 4px 10px;
+    box-sizing: border-box;
+    color: #4d7ee5;
+}
+
+article.secondArticle div.scan button{
+    width: 25%;
+    position: relative;
+    top: -2px;
+    padding: 8px;
+    outline: none;
+    border: 0;
+    color: white;
+    background: #474ae7;
+    font-size: 17px;
+}
+
+form > div.studentInfo{
+    margin-top: 15px;
+    background: #4d7ee5;
+    color: white;
+    font-size: 14px;
+    padding: 5px;
+    box-sizing: border-box;
+    border-radius: 14px;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    border: 3px solid #474ae7;
+}
+
+table{
+    margin: 13px 0px 0px;
+    width: 99%;
+    max-width: 1100px;
+    position: relative;
+    text-align: center;
+    border-collapse: collapse;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+table tbody{
+    display: block;
+    max-height: 168px;
+    overflow-y: scroll;
+}
+  
+table thead, table tbody tr {
+    display: table;
+    width: 100%;
+    table-layout: fixed;
+}
+
+tbody{
+    border: 1px solid #4d7ee5;
+
+}
+
+th{
+    padding: 10px 0px;
+    box-sizing: border-box;
+    background: #4d7ee5;
+    color: white;
+    text-align: center;
+    font-size: 14px;
+}
+
+tr{
+    box-sizing: border-box;
+    color: #2727a8;
+    border-bottom: 1px solid #4d7ee5;
+}
+
+td{
+    text-align: center;
+    padding: 10px;
+    box-sizing: border-box;
+    font-size: 14px;
+}
+
+section{
+    margin: 0 auto;
+    background: #4d7ee5;
+    padding: 20px 10px 10px;
+    border-radius: 10px;
+    box-sizing: border-box;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+    height: 480px;
+}
+
+section article img{
+    width: 100%;
+    max-width: 100px;
+    height: 100px; 
+    margin: 100px auto 0px;
+    border-radius: 50%;
+    border: 2px solid #4d7ee5;
+    padding: 10px;
+    box-sizing: border-box;
+    background: white;
+}
+
+section > a.showPopUp{
+    width: 90%;
+    margin: 0px auto;
+    background: white;
+    box-sizing: border-box;
+    position: relative;
+    top: 5px;
+}
+
+section a.showPopUp{
+    cursor: pointer;
+}
+
+section > a.showPopUp p{
+    margin: 0 auto 10px;
+    font-size: 20px;
+    background: #2727a8;
+    color: white;
+    width: inherit;
+    display: block;
+    padding: 10px 0px;
+    border-radius: 14px;
+}
+
+/* START GRID SYSTEM */
+
+form.wrapForm,
+form.wrapForm article.mainArticle,
+form.wrapForm article.secondArticle,
+nav,
+nav ul{
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+}
+
+nav > img{
+    grid-column: 1/4;
+}
+
+nav a{
+    grid-column: 1/13;
+}
+
+nav > ul{
+    grid-column: 4/13;
+}
+
+nav ul li a{
+    font-size: 21px;
+}
+
+nav li:nth-of-type(1){
+    grid-column: 6/8;
+}
+
+nav li:nth-of-type(2){
+    grid-column: 8/10;
+}
+
+nav li:nth-of-type(3){
+    grid-column: 10/12;
+}
+
+form.wrapForm article{
+    grid-column: 1/10;
+}
+
+form.wrapForm article.mainArticle div.first{
+    grid-column: 3/7;
+}
+
+form.wrapForm article.mainArticle div.second{
+    grid-column: 7/11;
+}
+
+form.wrapForm article.secondArticle div#time{
+    grid-column: 2/7;
+}
+
+form.wrapForm article.secondArticle div.scan{
+    grid-column: 7/12;
+}
+
+form > div.studentInfo{
+    grid-column: 4/7;
+}
+
+form.wrapForm table{
+    grid-column: 1/10;
+}
+
+form.wrapForm section{
+    grid-column: 10/13;
+    grid-row: 1/7;
+}
+
+/* END GRID SYSTEM */
+
+/* START MEDIA QUERY */
+
+@media screen and (max-width: 1120px) {
+
+    form.wrapForm article{
+        grid-column: 1/9;
+    }
+
+    article.mainArticle > div p{
+        font-size: 17px !important;
+    }
+
+    form.wrapForm article.secondArticle div#time{
+        grid-column: 1/13;
+    }
+    
+    form.wrapForm article.secondArticle div.scan{
+        grid-column: 4/10;
+    }
+
+    article.secondArticle div.scan p{
+        margin-top: 20px;
+    }
+
+    section article img{
+        margin: 30px auto 0px;
+        border-radius: 50%;
+    }
+
+    form > div.studentInfo{
+        grid-column: 3/7;
+    }
+    
+
+    form.wrapForm table{
+        grid-column: 1/13;
+    }
+    
+    form.wrapForm section{
+        grid-column: 9/13;
+        grid-row: 1/4;
+    }
+
+    section{
+        height: 360px;
+    }
+
+    section article img{
+        margin: 70px auto 0px;
+
+    }
+    
+}
+
+@media screen and (max-width: 960px){
+
+    nav > img{
+        grid-column: 2/12;
+    }
+    
+    nav > ul{
+        grid-column: 2/12;
+    }
+    
+    nav li:nth-of-type(1){
+        grid-column: 4/6;
+    }
+    
+    nav li:nth-of-type(2){
+        grid-column: 6/8;
+    }
+    
+    nav li:nth-of-type(3){
+        grid-column: 8/10;
+    }
+    
+    article.mainArticle > div p{
+        font-size: 18px;
+    }
+
+    form.wrapForm article{
+        grid-column: 1/9;
+    }
+
+    form.wrapForm article.mainArticle div.first{
+        grid-column: 2/7;
+    }
+    
+    form.wrapForm article.mainArticle div.second{
+        grid-column: 7/12;
+    }
+
+    section{
+        height: 330px;
+    }
+  
+}
+
+@media screen and (max-width: 790px){
+
+    nav{
+        padding-bottom: 6px;
+    }
+
+    nav img{
+        margin-bottom: 10px;
+    }
+
+    nav ul{
+        overflow: hidden;
+        background: white;
+        height: 0;
+        grid-column: 1/13;
+    }
+
+    nav ul.open{
+        height: auto;
+    }
+
+    nav img.logo{
+        margin: 0 auto;            
+    }
+
+    nav li > a{
+        margin: 0px !important;
+        padding: 12px 0px 4px;
+        cursor: pointer;
+        color: white !important;
+    }
+
+    nav li > a.current{
+        color:#2727a8 !important;
+    }
+
+    nav li{
+        margin: 0;
+        padding: 2px 0px 12px;
+        background: #2727a8;
+        color: white
+    }
+
+    nav ul li:nth-of-type(1),
+    nav ul li:nth-of-type(2),
+    nav ul li:nth-of-type(3){
+        grid-column: 1/13;
+        width: 100%;
+        border-radius: 0;
+    }
+
+    nav a{
+        font-size: 13px !important;
+        color: white !important;
+    }
+
+    a#navigate{
+        display: block !important;
+        height: 40px;
+        width: 100%;                                    /* appear in 90% x-coordinates */
+        background: url(../img/navigation.png) no-repeat 95% center;
+        cursor: pointer;                                    /* appear in center y-coordinates */
+        background-color: white;
+        margin-bottom: 6px;
+    } 
+
+    form.wrapForm article{
+        grid-column: 1/13;
+    }
+
+    article.secondArticle div.scan button{
+        font-size: 13px;
+    }
+
+    form.wrapForm section{
+        grid-column: 1/13;
+    }
+
+    section{
+        padding: 10px 0px 20px;
+        height: 220px;
+    }
+
+    section article img{
+        margin: 0px auto;
+        border-radius: 50%;
+    }
+
+    section > a.showPopUp{
+        width: 40%;
+    }
+
+    form > div.studentInfo{
+        grid-column: 4/10;
+    }
+
+}
+
+@media screen and (max-width: 540px){
+
+
+    article.mainArticle > div p{
+        font-size: 3.1vw !important;
+    }
+
+    article.secondArticle div.scan button{
+        font-size: 2.1vw !important;
+    }
+
+    article.mainArticle div.first p,
+    article.mainArticle div.second p{
+        font-size: 14px;
+    }
+
+    article.mainArticle div.first h1,
+    article.mainArticle div.second h1{
+        font-size: 23px;
+    }
+
+    th{
+        font-size: 12px;
+    }
+
+    td{
+        font-size: 11px;
+    }
+
+}
+
+/* END MEDIA QUERY */

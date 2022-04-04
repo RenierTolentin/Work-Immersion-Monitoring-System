@@ -1,0 +1,145 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    text-decoration: none;
+}
+
+nav{
+    background: #e5e5fd;
+    width: 100%;
+    padding: 5px 0;
+    box-shadow: 0px 4px #c0bfbf;
+    text-align: center;
+}
+
+nav img{
+    width: 100%;
+    max-width: 200px;
+    height: 64px;
+    margin: 5px 0px;
+}
+
+section.childSection{
+    width: 90%;
+    max-width: 1000px;
+    background: #e5e5fd;
+    padding: 30px;
+    box-sizing: border-box;
+    justify-content: center;
+    border-radius: 20px;
+    height: 90px;
+    margin: 22px auto;
+    box-shadow: 4px 4px #2727a8;
+    text-align: center;
+    position: relative;
+    display: flex;
+}
+
+
+section.childSection h3{
+    position: absolute;
+    color: #4276e6;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    font-size: 24px;
+}
+
+section a{
+    position: absolute;
+    left: 50px;
+}
+
+main{
+    margin: 0 auto;
+    width: 100%;
+    max-width: 740px;
+    justify-content: center;
+}
+
+a.choose{
+    width: 100%;
+    max-width: 280px;
+    height: 410px;
+    background: #4d7ee5;
+    margin: 0 auto;
+    text-align: center;
+    box-sizing: border-box;
+    border-radius: 20px;
+    box-shadow: 4px 4px #2727a8;
+    margin-bottom: 20px;
+}
+
+a.choose h3{
+    color: white;
+    width: 170px;
+    padding: 7px;
+    background: #d5d5d8;
+    margin: 0 auto;
+    border-radius: 20px;
+    position: relative;
+    top: 20px;
+    font-size: 16px;
+}
+
+a.choose img{
+    width: 80%;
+    height: 350px !important;
+    height: inherit;
+    padding: 30px 20px 10px;
+    box-sizing: border-box;
+    background: white;
+    border-radius: 20px;
+}
+
+/* START GRID SYSTEM */
+
+main{
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+}
+
+a.choose:nth-of-type(1){
+    grid-column: 1/7;
+}
+
+a.choose:nth-of-type(2){
+    grid-column: 7/13;
+}
+
+/* END GRID SYSTEM */
+
+
+/* START MEDIA QUERY */
+
+@media screen and (max-width:800px){
+
+    section.childSection{
+        width: 80%;
+    }
+
+    a.choose h3{
+        width: 180px;
+    }
+
+    a.choose:nth-of-type(1){
+        grid-column: 3/11;
+    }
+    
+    a.choose:nth-of-type(2){
+        grid-column: 3/11;
+    }
+    
+}
+
+@media screen and (max-width:500px){
+
+    a.choose h3{
+        width: 140px;
+        font-size: 13px;
+    }
+    
+}
+
+/* END MEDIA QUERY */

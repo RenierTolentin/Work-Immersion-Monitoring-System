@@ -1,0 +1,358 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    text-decoration: none;
+    list-style-type: none;
+}
+
+button:hover{
+    cursor: pointer;
+} 
+
+.showError{
+    z-index: 2;
+    color: white;
+    font-size: 11px;
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+div.secondContentAdjust{
+    margin-top: 50px !important;
+}
+
+nav{
+    background: #e5e5fd;
+    width: 100%;
+    padding: 5px 0;
+    box-shadow: 0px 4px #c0bfbf;
+    text-align: center;
+}
+
+nav img{
+    width: 100%;
+    max-width: 200px;
+    height: 54px;
+    margin: 0 auto;
+}
+
+article.popUp{
+    width: 95%;
+    max-width: 620px;
+    position: fixed;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    z-index: 4;
+    padding: 20px;
+    box-sizing: border-box;
+    border: 3px solid #474ae7;
+    background: #4d7ee5;
+    border-radius: 20px;
+    visibility: hidden;
+    opacity: 0;
+    transition: .7s;
+}
+
+article.popUp > h3{
+    background: #4d7ee5;
+    position: absolute;
+    right: 20px;
+    padding: 10px 15px;
+    box-sizing: border-box;
+    color: white;
+    border-radius: 10px;
+    z-index: 1;
+}
+
+article.popUp div{
+    background: white;
+    margin: 25px;
+    padding: 20px;
+    box-sizing: border-box;
+    border-radius: 10px;
+    position: relative;
+}
+
+article.popUp a:hover{
+    cursor: pointer;
+}
+
+article.popUp div p:nth-of-type(1){
+    margin-top: 20px;
+}
+
+article.popUp div p{
+    padding: 6px 0px;
+    color: #3e75ee;
+}
+
+article.popUp div p img{
+    position: relative;
+    bottom: -2px;
+}
+
+article#userGuidePopUp.active{
+    visibility: visible;
+    opacity: 1;
+    top: 55%;
+}
+
+section.childSection{
+    width: 100%;
+    background: #e5e5fd;
+    padding: 30px;
+    box-sizing: border-box;
+    justify-content: center;
+    border-radius: 20px;
+    height: 90px;
+    margin: 22px auto;
+    box-shadow: 7px 7px gainsboro;
+    text-align: center;
+}
+
+section.childSection h3{
+    color: #5f8cee;
+}
+
+form.firstForm{
+    width: 90%;
+    max-width: 1000px;
+    margin: 0 auto;
+    height: 560px;
+    position: relative;
+    text-align: center;
+}
+
+form.active{
+    filter: blur(20px);
+    pointer-events: none;
+    user-select: none;
+}
+
+div.verifyAccountForm{
+    background: #5f8cee;
+    border-radius: 20px;
+    position: relative;
+    border: 5px solid #474ae7;
+}
+
+
+div.verifyAccountForm img{
+    width: 70%;
+    height: 300px;
+    padding: 20px 0;
+}
+
+div.firstContent h3{
+    padding: 20px 0 10px;
+    text-align: center;
+    color: white;
+}
+
+div.firstContent button{
+    padding: 4px 10px !important;
+    background: #5f8cee !important;
+    border-radius: 5px;
+    color: white !important;
+}
+
+div.backgroundDiv{
+    background: white;
+    width: 60%;
+    margin: 0 auto;
+    border-radius: 20px;
+    position: relative;
+    text-align: center;
+}
+
+div.backgroundDiv button{
+    position: absolute;
+    padding: 7px 10px;
+    top: 99%;
+    left: 50%;
+    transform: translate(-50%,-50%);    
+    border: 0;
+    outline: none;
+    background: #51a8f0;
+    font-size: 16px;
+    color: wheat;
+}
+
+div.secondContent input{
+    width: 100%;
+    font-size: 21px;
+    text-align: center;
+    padding: 10px;
+    margin: 12px auto;
+    outline: none;
+    border: 0;
+}
+
+div.secondContent input:nth-of-type(1){
+    text-transform: uppercase;
+    margin-top: 30px;
+}
+
+div.secondContent input.removeStyle{
+    text-transform: none;
+}
+
+div.thirdContent{
+    position: relative;
+}
+
+div.thirdContent button{
+    position: absolute;
+    font-size: 21px;
+    text-align: center;
+    padding: 10px 50px;
+    margin: 30px auto;
+    background: #366dd3;
+    outline: none;
+    border: 0;
+    top: 67%;
+    left: 50%;
+    transform: translate(-50%, -50%); 
+}
+
+div.thirdContent div.showErrors{
+    left: -50%;
+}
+
+div.thirdContent button a{
+    color: white;
+    text-transform: uppercase;
+}
+
+div.toRounded{
+    margin-top: 80px;
+}
+
+div.toRounded img{
+    width: 150px !important;
+    height: 150px !important;
+    display: block;
+    border-radius: 50%;
+    border: 4px solid white;
+    box-sizing: border-box;
+    margin: 0 auto;
+}
+
+div.toRounded label{
+    display: block;
+    text-align: center;
+    padding: 5px 0px;
+    width: 100%;
+    text-transform: uppercase;
+    font-size: 15px;
+    color: white;
+    font-weight: bolder;
+}
+
+div.toRounded input.profileImage{
+    display: none;
+    width: 0;
+    height: 0;
+}
+
+div.toRounded img#profileDisplay{
+    padding: 0 !important;
+}
+
+form.firstForm,
+section.childSection,
+div.verifyAccountForm{
+    display: grid;
+    grid-template-columns: repeat(14, 1fr);
+}
+
+section.childSection{
+    grid-column: 1/15;
+}
+
+.childSection img{
+    grid-column: 1/3;
+}
+
+.childSection h3{
+    grid-column: 3/13;
+}
+
+div.verifyAccountForm{
+    grid-column: 1/15;
+}
+
+div.firstContent{
+    grid-column: 1/7;
+}
+
+div.secondContent{
+    grid-column: 7/11;
+}
+
+div.thirdContent{
+    grid-column: 11/15;
+}
+
+@media screen and (max-width: 800px){
+ 
+    form.firstForm{
+        width: 80%;
+    }
+
+    form.firstForm input{
+        font-size: 16px !important;
+    }
+
+    div.secondContentAdjust{
+        margin-top: 20px !important;
+    }
+
+    div.secondContent input:nth-of-type(1){
+        text-transform: uppercase;
+        margin-top: 10px;
+    }
+
+    div.verifyAccountForm{
+        padding-bottom: 80px;
+    }
+
+    div.toRounded {
+        margin-top: 20px;
+    }
+
+    div.thirdContent button{
+        top: 100%;
+    }
+
+    div.firstContent{
+        grid-column: 3/13;
+    }
+    
+    div.secondContent{
+        grid-column: 3/13;
+    }
+    
+    div.thirdContent{
+        grid-column: 3/13;
+    }
+
+}
+
+@media screen and (max-width: 700px){
+
+    div.backgroundDiv{
+        width: 90%;
+    }
+
+}
+
+@media screen and (max-width: 500px){
+
+    div.backgroundDiv{
+        width: 100%;
+    }
+
+}

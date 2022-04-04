@@ -1,0 +1,185 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    list-style-type: none;
+    text-decoration: none;
+}
+
+body{
+    width: 100%;
+    background: url(../img/techbackground.png) no-repeat;
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+a.preview{
+    width: 100%;
+    max-width: 130px;
+    position: absolute;
+    left: 10px;
+    top: 10px;
+    color: #4d7ee5;
+    padding: 7px 0px;
+    background: #f0efef;
+    border-radius: 10px;
+    box-shadow: 4px 4px #2727a8;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+}
+
+a.preview p{
+    position: relative;
+    top: 7px;
+    margin-left: 5px ;
+}
+
+a.createAccount{
+    width: 100%;
+    max-width: 130px;
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    color: #4d7ee5;
+    padding: 7px 0px;
+    background: #f0efef;
+    border-radius: 10px; 
+    box-shadow: 4px 4px #2727a8;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+}
+
+a.createAccount img{
+    width: 100%;
+    max-width: 32px;
+    border-radius: 50%;
+}
+
+a.createAccount p{
+    position: relative;
+    top: 7px;
+    margin-left: 5px ;
+}
+
+form.mainForm{
+    width: 480px;
+    height: 380px;
+    margin: auto;
+    background: #f0efef;
+    border-radius: 15px;
+    padding: 10px;
+    text-align: center;
+    box-shadow: 4px 4px #2727a8;
+    vertical-align: middle;
+    position: relative;
+}
+
+div.InputGroup{
+    top: 180px;
+    position: absolute;
+    width: 280px;
+}
+
+input.designInput{
+    width: 90%;
+    padding: 5px 0;
+    margin: 7px 0;
+    border: 0;
+    outline: none;
+    background: white;
+    text-align: center;
+    border-radius: 20px;
+    font-size: 17px;
+    color: blue;
+}
+
+div.showError{
+    color: #5891ed;
+    z-index: 1;
+    position: relative;
+    width: 100%;
+    box-sizing: border-box;
+    text-align: center;
+    font-size: 13px;
+}
+
+div.welcome{
+    text-align: center;
+    padding: 20px;
+    background: #4d7ee5;
+    border-radius: 10px;
+    color: white;
+}
+
+.welcome p span{
+    color: #f1cc26;
+    font-weight: bolder;
+}
+
+div#AdminLogIn{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-25%);
+}
+
+a.forgotPassword{
+    font-size: 13px;
+    cursor: pointer;
+    color: #5891ed;
+}
+
+div button.submit{
+    width: 65%;
+    padding: 10px 30px;
+    cursor: pointer;
+    display: block;
+    margin: 25px auto;
+    background: #4d7ee5;
+    border: 0;
+    outline: none;
+    border-radius: 30px;
+    color: white;
+}
+
+img.displayOperator{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    margin-bottom: 10px;
+    margin-left: 10px;
+    width: 40px;
+    height: 40px;
+    padding: 5px;
+    box-sizing: border-box;
+    background: #4d7ee5;
+    border-radius: 50%;
+}
+
+/* START MEDIA QUERY */
+
+@media screen and (max-width: 800px){
+
+    body{
+        background: white;
+    }
+
+    form.mainForm{
+        width: 95%;
+        max-width: 350px;
+    }
+    
+     a.preview,
+     a.createAccount{
+         color: #5891ed; 
+     }
+
+}
+
+
+/* END MEDIA QUERY */

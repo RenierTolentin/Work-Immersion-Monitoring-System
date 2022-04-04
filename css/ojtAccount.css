@@ -1,0 +1,424 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    text-decoration: none;
+    list-style-type: none;
+}
+
+div.showError{
+    z-index: 2;
+    color: white;
+    font-size: 11px;
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+button:hover{
+    cursor: pointer;
+} 
+
+nav{
+    background: #e5e5fd;
+    width: 100%;
+    padding: 5px 0;
+    box-shadow: 0px 4px #c0bfbf;
+    text-align: center;
+}
+
+nav img{
+    width: 100%;
+    max-width: 200px;
+    height: 54px;
+    margin: 0 auto;
+}
+
+article.popUp{
+    width: 95%;
+    max-width: 620px;
+    position: fixed;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    z-index: 4;
+    padding: 20px;
+    box-sizing: border-box;
+    border: 3px solid #474ae7;
+    background: #5f8cee;
+    border-radius: 20px;
+    visibility: hidden;
+    opacity: 0;
+    transition: .7s;
+}
+
+article.popUp > h3{
+    background: #5f8cee;
+    position: absolute;
+    right: 20px;
+    padding: 10px 15px;
+    box-sizing: border-box;
+    color: white;
+    border-radius: 10px;
+    z-index: 1;
+}
+
+article.popUp div{
+    background: white;
+    margin: 25px;
+    padding: 20px;
+    box-sizing: border-box;
+    border-radius: 10px;
+    position: relative;
+}
+
+article.popUp a:hover{
+    cursor: pointer;
+}
+
+article.popUp div p:nth-of-type(1){
+    margin-top: 20px;
+}
+
+article.popUp div p{
+    padding: 6px 0px;
+    color: #3e75ee;
+}
+
+article.popUp div p img{
+    position: relative;
+    bottom: -2px;
+}
+
+article#userGuidePopUp.active{
+    visibility: visible;
+    opacity: 1;
+    top: 55%;
+}
+
+form{
+    width: 95%;
+    max-width: 1000px;
+    margin: 0 auto;
+    height: 580px;
+    position: relative;
+    overflow: hidden;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+form.active{
+    filter: blur(20px);
+    pointer-events: none;
+    user-select: none;
+}
+
+div.slides{
+    width: 200%;
+    height: 570px;
+    display: flex;
+}
+
+div.slide{
+    width: 50%;
+}
+
+div.slides input#radio1,
+div.slides input#radio2{
+    display: none;
+}
+
+section.childSection{
+    width: 100%;
+    background: #e5e5fd;
+    padding: 30px;
+    justify-content: center;
+    border-radius: 20px;
+    height: 90px;
+    margin: 15px auto 35px auto;
+    text-align: center;
+    box-sizing: border-box;
+}
+
+section.childSection h3{
+    color: #5f8cee;
+}
+
+div.verifyAccountForm{
+    background: #5f8cee;
+    border-radius: 20px;
+    position: relative;
+    height: 420px;
+    border: 5px solid #474ae7;
+    margin-top: 40px;
+}
+
+div.verifyAccountForm img.studentImage{
+    width: 70%;
+    height: 310px;
+    padding: 20px 0;
+}
+
+div.verifyAccountForm input{
+    width: 100%;
+    font-size: 21px;
+    padding: 10px;
+    margin: 5px 0;
+    text-align: center;
+    border: 0;
+    outline: none;
+}
+
+div.firstContent h3{
+    padding: 20px 0 12px !important;
+    text-align: center !important;
+    color: white !important;
+}
+
+div.firstContent a{
+    padding: 4px 10px !important;
+    border-radius: 5px;
+    color: white !important;
+    background: #5f8cee !important;
+}
+
+div.backgroundDiv{
+    background: white;
+    width: 60%;
+    margin: 0 auto;
+    border-radius: 20px;
+    position: relative;
+    text-align: center;
+}
+
+div.backgroundDiv a{
+    position: absolute;
+    padding: 7px 15px;
+    top: 100%;
+    left: 50%;
+    transform: translate(-50%,-50%);    
+    border: 0;
+    outline: none;
+    background: #51a8f0;
+    font-size: 16px;
+    color: wheat;
+    cursor: pointer;
+}
+
+div.secondContentAdjust{
+    margin-top: 73px;
+}
+
+form input{
+    width: 100%;
+    font-size: 21px;
+    text-align: center;
+    padding: 10px;
+    margin: 10px auto !important;
+    outline: none;
+    border: 0;
+}
+
+div.secondContent input:nth-of-type(1){
+    text-transform: uppercase;
+    margin-top: 30px;
+}
+
+div.secondContent input.removeStyle{
+    text-transform: none;
+}
+
+div.toRounded{
+    margin-top: 20px;
+}
+
+div.toRounded img{
+    width: 200px;
+    height: 200px;
+    display: block;
+    border-radius: 50%;
+    border: 4px solid white;
+    box-sizing: border-box;
+    margin: 0 auto;
+}
+
+div.toRounded label{
+    display: block;
+    text-align: center;
+    padding: 5px 0px;
+    width: 100%;
+    text-transform: uppercase;
+    font-size: 15px;
+    color: white;
+    font-weight: bolder;
+}
+
+div.toRounded input.profileImage{
+    display: none;
+    width: 0;
+    height: 0;
+}
+
+div.fourthContent{
+    margin-top: 80px;
+}
+
+div.fourthContent button{
+    width: 100%;
+    font-size: 21px;
+    padding: 10px;
+    margin: 16px 0;
+    border: 0;
+    outline: none;
+    background: #474ae7;
+    color: white;
+}
+
+div.fourthContent a{
+    color: white;
+}
+
+.navigation-manual{
+    position: absolute;
+    display: flex;
+    margin-top: -453px;
+    justify-content: center;
+    width: 100%;
+}
+
+.manual-btn{
+    border: 2px solid #474ae7;
+    width: 100px;
+    text-align: center;
+    border-radius: 20px;
+    margin: 0 15px;
+    transition: .4s;
+    cursor: pointer;
+    color: #c0bfbf;
+    font-size: 13px;
+}
+
+.manual-btn:hover{
+    background: #474ae7;
+    color: white;
+}
+
+input#radio2:checked ~ div.first{
+    margin-left: -50%;
+}
+
+/* START GRID SYSTEM */
+
+section.childSection,
+div.verifyAccountForm{
+    display: grid;
+    grid-template-columns: repeat(14, 1fr);
+}
+
+section.childSection{
+    grid-column: 1/15;
+}
+
+.childSection img{
+    grid-column: 1/3;
+}
+
+.childSection h3{
+    grid-column: 3/13;
+}
+
+div.firstContent{
+    grid-column: 2/8;
+}
+
+div.secondContent{
+    grid-column: 8/13;
+}
+
+div.thirdContent{
+    grid-column: 2/6;
+}
+
+div.fourthContent{
+    grid-column: 7/13;
+}
+
+/* END GRID SYSTEM */
+
+/* START MEDIA QUERY */
+
+@media screen and (max-width: 850px){
+
+    form{
+        height: 910px;
+        width: 80%;
+    }
+
+    div.backgroundDiv{
+        width: 70%;
+    }
+
+    div.slides,
+    div.verifyAccountForm{
+        height: 750px;
+        margin-bottom: 100px;
+    }
+
+    form input{
+        font-size: 16px !important;
+    }
+
+    .navigation-manual{
+        margin-top: -733px;
+    }
+    
+    div.firstContent,
+    div.thirdContent{
+        grid-column: 3/13;
+    }
+
+    div.thirdContent{
+        margin-top: 40px;
+    }
+
+    div.fourthContent{
+        margin-top: 10px;
+    }
+    
+    div.secondContent,
+    div.fourthContent{
+        grid-column: 3/13;
+    }
+
+    div.secondContentAdjust{
+        margin-top: 10px;
+    }
+
+}
+
+@media screen and (max-width: 700px){
+
+    article.popUp div p{
+        font-size: 2.2vw;
+    }
+
+
+    div.backgroundDiv{
+        width: 90%;
+    }
+
+}
+
+@media screen and (max-width: 500px){
+
+    article.popUp div p{
+        font-size: 3vw;
+    }
+
+
+    div.backgroundDiv{
+        width: 100%;
+    }
+
+}
+
+/* END MEDIA QUERY */

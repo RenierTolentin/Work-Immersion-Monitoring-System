@@ -1,0 +1,474 @@
+*{
+    padding: 0;
+    margin: 0;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    text-decoration: none;
+    list-style-type: none;
+}
+
+::-webkit-scrollbar{
+    width: 15px;
+    position: fixed;
+    top: 0;
+    right: 0;
+    background: #e5e5fd;
+}
+
+::-webkit-scrollbar-thumb{
+    background: #2727a8;
+    position: fixed;
+    top: 0;
+    right: 0;
+}
+
+div.loader{
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    width: 100%;
+    height: 100%;
+    background: #4d7ee5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+div.loader > img{
+    width: 110px; 
+    height: 100px;
+}
+
+div.loader.loaderHidden{
+    animation: fadeOut .5s;
+    animation-fill-mode: forwards;
+    animation-delay: 1s;
+}
+
+@keyframes fadeOut{
+    100%{opacity: 0; visibility: hidden};
+}
+
+form.userGuide{
+    width: 95%;
+    max-width: 420px;
+    position: fixed;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    z-index: 4;
+    padding: 20px 20px 20px;
+    box-sizing: border-box;
+    border: 3px solid #474ae7;
+    background: white;
+    border-radius: 20px;
+    visibility: hidden;
+    opacity: 0;
+    transition: .7s;
+    text-align: center;
+}
+
+form#userGuidePopUp.active{
+    visibility: visible;
+    opacity: 1;
+    top: 55%;
+    transition: .7s;
+}
+
+form.userGuide h3{
+    right: 0;
+    color: #474ae7;
+    margin-bottom: 20px;
+    font-size: 16px;
+}
+
+form.userGuide a{
+    margin: 0px auto;
+}
+
+form.userGuide a:nth-of-type(1){
+    outline: none;
+    padding: 5px 12px;
+    border: 2px solid #4365af;
+    box-sizing: border-box;
+    color: #567fd8;
+    font-weight: 800;
+}
+
+form.userGuide a:nth-of-type(2){
+    outline: none;
+    padding: 5px 12px;
+    background: #567fd8;
+    border: 2px solid #567fd8;
+    box-sizing: border-box;
+    color: white;
+}
+
+nav{
+    background: #4d7ee5;
+    padding: 10px 5px;
+    box-sizing: border-box;
+}
+
+nav img{
+    width: 100%;
+    max-width: 150px;
+    border: 5px solid #4365af;
+    padding: 10px;
+    box-sizing: border-box;
+    border-radius: 26px;
+    background: white;
+}
+
+nav ul{
+    height: 30px;
+}
+
+nav li{
+    width: 90%;
+    font-size: 25px;
+    padding: 7px;
+    box-sizing: border-box;
+    border-radius: 20px;
+    text-align: center;
+    margin: 14px auto;
+}
+
+nav li a{
+    color: white;
+    font-weight: 800;
+    text-align: center;
+}
+
+li.current{
+    background: white;
+}
+
+a.current{
+    color: #4d7ee5;
+}
+
+form.wrapForm{
+    width: 95%;
+    max-width: 1100px;
+    padding: 20px;
+    box-sizing: border-box;
+    border: 2px solid #4d7ee5;
+    border-radius: 20px;
+    margin: 40px auto 20px;
+    position: relative;
+    text-align: center;
+}
+
+form#blurBackground.active{
+    filter: blur(20px);
+    pointer-events: none;
+    user-select: none;
+}
+
+article.mainArticle > div{
+    background: #4d7ee5;
+    border-radius: 10px;
+    color: white;
+    width: 95%;
+    margin: 20px auto 0px;
+}
+
+article.mainArticle > div p{
+    margin: 10px 0px 0px;
+    font-size: 20px;
+}
+
+article.mainArticle > div h1{
+    font-size: 30px;
+    margin: 0px 0px 10px;
+}
+
+div.wrapBar{
+    width: 60%;
+    margin: 10px auto 0px;
+}
+
+div.wrapBar p{
+    font-size: 17px;
+    font-weight: 700;
+    color: #567fd8;
+}
+
+div.wrapBar div.completionBar{
+    width: 100%;
+    border: 3px solid #567fd8;
+    height: 30px;
+    box-sizing: border-box;
+}
+
+table{
+    width: 99%;
+    max-width: 1100px;
+    position: relative;
+    text-align: center;
+    border-collapse: collapse;
+    box-sizing: border-box;
+    text-align: center;
+    margin: 20px 0px 10px;
+}
+
+table tbody{
+    display: block;
+    max-height: 236px;
+    overflow-y: scroll;
+}
+  
+table thead, table tbody tr {
+    display: table;
+    width: 100%;
+    table-layout: fixed;
+}
+
+tbody{
+    border: 1px solid #4d7ee5;
+
+}
+
+th{
+    padding: 20px 0px;
+    box-sizing: border-box;
+    background: #4d7ee5;
+    color: white;
+    text-align: center;
+}
+
+tr{
+    box-sizing: border-box;
+    color: #2727a8;
+    border-bottom: 1px solid #4d7ee5;
+}
+
+td{
+    text-align: center;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+section{
+    margin: 0 auto;
+    background: #4d7ee5;
+    padding: 10px;
+    border-radius: 10px;
+    box-sizing: border-box;
+    width: 100%;
+}
+
+section article img{
+    width: 100%;
+    max-width: 100px;
+    height: 100px; 
+    margin: 30px auto 0px;
+    border-radius: 50%;
+    border: 2px solid #4d7ee5;
+    padding: 10px;
+    box-sizing: border-box;
+    background: white;
+}
+
+section div.studentInfo p{
+    padding: 10px;
+    border-radius: 10px;
+    box-sizing: border-box;
+    background: white;
+    color: #567fd8;
+    margin: 8px auto 0px;
+    text-align: left;
+    width: 85%;
+    font-size: 12px;
+}
+
+section div.studentInfo img{
+    margin: 0px 10px 0px 10px;
+}
+
+section div.studentInfo p span{
+    position: relative;
+    top: -2px;
+}
+
+section div.studentInfo p:nth-of-type(5){
+    margin-bottom: 14px;
+}
+
+section > a.showPopUp{
+    width: 90%;
+    margin: 0px auto;
+    box-sizing: border-box;
+}
+
+section a.showPopUp{
+    cursor: pointer;
+}
+
+section > a.showPopUp p{
+    margin: 0 auto;
+    font-size: 20px;
+    background: #2727a8;
+    color: white;
+    width: inherit;
+    display: block;
+    padding: 10px 0px;
+    border-radius: 14px;
+}
+
+/* START GRID SYSTEM */
+
+form.wrapForm,
+form.wrapForm article.mainArticle,
+nav,
+nav ul{
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+}
+
+form.wrapForm > section{
+    grid-row: 1/4;
+}
+
+form.wrapForm article{
+    grid-column: 1/10;
+}
+
+form.wrapForm article.mainArticle div.first{
+    grid-column: 3/7;
+}
+
+form.wrapForm article.mainArticle div.second{
+    grid-column: 7/11;
+}
+
+div.wrapBar{
+    grid-column: 1/10;
+}
+
+nav > img{
+    grid-column: 2/5;
+}
+
+nav > ul{
+    grid-column: 5/13;
+}
+
+nav li:nth-of-type(1){
+    grid-column: 9/11;
+}
+
+table{
+    grid-column: 1/10;
+}
+
+section{
+    grid-column: 10/13;
+    grid-row: 1/3;
+}
+
+@media screen and (max-width: 1030px) {
+
+    nav ul li:nth-of-type(1){
+        grid-column: 8/12 !important;
+    }
+
+    form.wrapForm article{
+        grid-column: 1/13;
+    }
+
+    section{
+        grid-column: 1/13;
+        display: grid;
+        grid-template-columns: repeat(12, 1fr);
+    }
+
+    section article img{
+        margin-top: 0px;
+        grid-column: 1/13;
+    }
+
+    section div.studentInfo{
+        grid-column: 1/13;
+        display: grid;
+        grid-template-columns: repeat(12, 1fr);
+    }
+
+    section div.studentInfo p:nth-of-type(odd){
+        grid-column: 2/7;
+        text-align: center;
+    }
+
+    section div.studentInfo p:nth-of-type(even){
+        grid-column: 7/12;
+        text-align: center;
+    }
+
+    section > a.showPopUp{
+        grid-column: 1/13;
+        width: 40% !important;
+    }
+
+    section > a.showPopUp p{
+        width: 70%;
+    }
+    
+    table{
+        grid-column: 1/13;
+    }
+
+}
+
+@media screen and (max-width: 610px){
+
+    nav ul li{
+        font-size: 17px;
+    }
+
+    article.mainArticle div{
+        margin-top: 14px;
+        padding: 10px 4px;
+        box-sizing: border-box;
+    }
+    
+
+    article.mainArticle div p{
+        font-size: 14px;
+    }
+
+    article.mainArticle div h1{
+        font-size: 25px;
+    }
+
+    form.wrapForm article.mainArticle div.first{
+        grid-column: 2/7;
+    }
+    
+    form.wrapForm article.mainArticle div.second{
+        grid-column: 7/12;
+    }
+
+    section > a.showPopUp p{
+        width: 100%;
+    }
+
+    section p img{
+        display: none;
+    }
+
+    section div.studentInfo p{
+        font-size: 10px;
+    }
+
+    table th{
+        font-size: 13px;
+    }
+
+    table td{
+        font-size: 11px;
+    }
+
+}
+
+/* END GRID SYSTEM */
